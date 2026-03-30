@@ -1,0 +1,110 @@
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --app-bg: #eef2f7;
+  --sidebar-bg: #e6ebf3;
+  --sidebar-button: #dfe6ef;
+  --history-active: #dbe4f1;
+  --profile-bg: #eef2f9;
+  --mark-bg: #edf3fe;
+  --mark-text: #4f7bf7;
+  --user-avatar-bg: #dae4fb;
+  --user-avatar-text: #2e4d92;
+  --pill-badge-bg: #e7efff;
+  --pill-badge-text: #547ef7;
+  --card-bg: #ffffff;
+  --card-border: #edf0f4;
+  --card-shadow: 0 1px 2px rgba(31, 31, 31, 0.04);
+  --composer-bg: #ffffff;
+  --composer-border: #d9dee7;
+  --composer-shadow: none;
+  --hero-composer-bg: #ffffff;
+  --hero-composer-border: #dde2e9;
+  --hero-composer-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
+  --profile-menu-bg: #ffffff;
+  --profile-menu-border: #dde2e9;
+  --profile-menu-shadow: 0 12px 30px rgba(30, 41, 59, 0.12);
+  --theme-icon: #5f6368;
+  --send-bg: #dbe6ff;
+  --send-text: #426fe8;
+  --code-bg: #f1f4f9;
+  --border: #edf1f6;
+  --text-primary: #1f1f1f;
+  --text-secondary: #4d5767;
+  --text-muted: #7a8495;
+  --error-text: #c62828;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --app-bg: #131314;
+  --sidebar-bg: #1e1f20;
+  --sidebar-button: #2b2c2f;
+  --history-active: #2b2c31;
+  --profile-bg: #2c2d31;
+  --mark-bg: #232938;
+  --mark-text: #8ab4f8;
+  --user-avatar-bg: #333845;
+  --user-avatar-text: #d7e3ff;
+  --pill-badge-bg: #273245;
+  --pill-badge-text: #8ab4f8;
+  --card-bg: #1e1f20;
+  --card-border: #2b2d31;
+  --card-shadow: none;
+  --composer-bg: #1f2022;
+  --composer-border: #34363b;
+  --composer-shadow: none;
+  --hero-composer-bg: #1f2022;
+  --hero-composer-border: #34363b;
+  --hero-composer-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  --profile-menu-bg: #202124;
+  --profile-menu-border: #34363b;
+  --profile-menu-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  --theme-icon: #e8eaed;
+  --send-bg: #8ab4f8;
+  --send-text: #0f1728;
+  --code-bg: #0f1115;
+  --border: #2b2d31;
+  --text-primary: #e3e3e3;
+  --text-secondary: #c4c7c5;
+  --text-muted: #9aa0a6;
+  --error-text: #ff8a80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--text-primary);
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
