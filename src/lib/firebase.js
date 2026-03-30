@@ -9,13 +9,14 @@ import {
 } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyAi6v8HU1WVZfzwzH2KF6RGXyqjze0tPyE',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'gemini-clone-40b75.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'gemini-clone-40b75',
+  storageBucket:
+    import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'gemini-clone-40b75.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '506108403891',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:506108403891:web:b03773db3aca064f2950c6',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || 'G-J4XC36047F',
 };
 
 const hasFirebaseConfig = Object.values(firebaseConfig).every(Boolean);
@@ -42,7 +43,7 @@ export { auth, hasFirebaseConfig, onAuthStateChanged };
 
 export async function loginWithGoogle() {
   if (!auth || !provider) {
-    throw new Error('Firebase config is missing. Add your Vite Firebase keys in .env.');
+    throw new Error('Firebase is not initialized correctly.');
   }
 
   const result = await signInWithPopup(auth, provider);

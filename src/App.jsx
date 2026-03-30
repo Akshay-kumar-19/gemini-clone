@@ -397,9 +397,8 @@ function App() {
                       className="profile-menu-item"
                       type="button"
                       onClick={handleLogin}
-                      disabled={!hasFirebaseConfig}
                     >
-                      Login with Google
+                      {hasFirebaseConfig ? 'Login with Google' : 'Login with Google'}
                     </button>
                   )}
                 </div>
